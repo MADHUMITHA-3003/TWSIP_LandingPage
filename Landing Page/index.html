@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header>
+            <div id="logo">
+                <img src="logo1.png">
+            </div>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#order">Order</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+    </header>
+    <section id="home">
+        <div class="home-content">
+            <div class="home-image">
+                <img src="home.png" alt="Image">
+            </div>
+            <div class="home-text">
+                <br><br><br><br><br>
+                <h2>Welcome to CHOCO HOUSE...!!!</h2>
+                <br><br>
+                <p>Indulge in the finest chocolate delights! At Choco House, we are dedicated to bringing you the most exquisite chocolate creations.</p>
+                <br>
+                <p>Whether it's our signature truffles, rich cocoa bars, or custom-made treats, we ensure that every bite is a delightful experience.</p>
+                <br>
+                <p>Explore our chocolate wonderland and satisfy your sweet cravings.</p>
+                <br><br><br>
+                <button class="zoom-button">Treat your taste buds with packs from Choco House - Handcrafted with love</button>
+            </div>
+        </div>
+    </section>    
+<section id="products">
+    <div class="product-container">
+    <div class="product">
+        <img src="p1.jpg" alt="Product 1">
+        <h3>Dark Chocaltate Bar</h3>
+        <p>Indulge in Bittersweet Bliss with our Dark Chocolate Bar</p>
+        <p class="rate">₹170.00 - 500g</p>
+    </div>
+    <div class="product">
+        <img src="p2.jpg" alt="Product 2">
+        <h3>Milk Chocolate Bar</h3>
+        <p>Creamy Delight: Unwrap Happiness with our Milk Chocolate Bar</p>
+        <p class="rate">₹300.00 - 500g</p>
+    </div>
+    <div class="product">
+        <img src="p3.jpg" alt="Product 3">
+        <h3>Pure Choco Chips</h3>
+        <p>Perfect for Baking and Snacking Pleasure</p>
+        <p class="rate">₹260.00 - 500g</p>
+    </div>
+    <div class="product">
+        <img src="p4.jpg" alt="Product 4">
+        <h3>Choco Lava Muffin</h3>
+        <p>Irresistible Choco Lava Muffin: A Warm Chocolatey Hug Inside</p>
+        <p class="rate">₹170.00 - 1 piece (500 g)</p>
+    </div>
+    <div class="product">
+        <img src="p5.jpg" alt="Product 5">
+        <h3>Mixed Cup-Cakes</h3>
+        <p>A Symphony of Flavors: Try Our Assorted Mixed Cupcakes</p>
+        <p class="rate">₹190.00 - 1 chocolate & 1 milk </p>
+    </div>
+    <div class="product">
+        <img src="p6.jpg" alt="Product 6">
+        <h3>Milk & Choco Shakes</h3>
+        <p>Creamy Bliss: Sip on Our Dreamy Milk & Choco Shakes</p>
+        <p class="rate">₹120.00 - 200 ml</p>
+    </div>
+    </div>
+</section>
+<section id="order">
+    <div class="order-container">
+        <h2>Make an Order</h2>
+        <form id="order-form">
+            <div class="form-group">
+                <label for="product">Select a Product:</label>
+                <select id="product" name="product">
+                    <option value="product1">Dark chocolate bar</option>
+                    <option value="product2">Milk Chocolate bar</option>
+                    <option value="product3">Pure Choco Chips</option>
+                    <option value="product4">Choco Lava muffin</option>
+                    <option value="product5">Mixed Cup-Cakes</option>
+                    <option value="product6">Milk & Choco Shakes</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1">
+            </div>
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="submit-order">Place Order</button>
+            </div>
+        </form>
+    </div>
+</section>
+</section>
+<script>
+    document.getElementById("order-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+        const product = document.getElementById("product").value;
+        const quantity = parseInt(document.getElementById("quantity").value);
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
+        const orderDetails = `Product: ${product}\nQuantity: ${quantity}\nName: ${name}\nEmail: ${email}\nPhone: ${phone}`;
+        alert(`Order Details:\n\n${orderDetails}` , 'Your order has been confirmed...! Happy tasting..!');
+    });
+</script>
+    <section id="about">
+        <div class="about-container">
+            <div class="about-content">
+            <div class="about-description">
+                <h2>About Us</h2>
+                <br>
+                <p>Welcome to Choco House, where the art of chocolate craftsmanship meets your deepest cravings. Our journey began with a passion for transforming the world's finest cocoa into delectable works of art.</p>
+                <br>
+                <p>At Choco House, we believe in the power of indulgence. Every chocolate creation is meticulously handcrafted, blending tradition with innovation to create exquisite flavors and textures that delight the senses.</p>
+                <br>
+                <p>Whether you're looking for the perfect gift, a delightful self-indulgence, or seeking to elevate a special occasion, Choco House is here to make your moments sweeter. Discover a world of flavors and experiences, crafted with love and a dedication to perfection.</p>
+                <br>
+                <p>At Choco House, we open our doors to all chocolate enthusiasts. Our journey began with a love for crafting exquisite chocolates, and we're thrilled to share our passion with you. Join us on this delectable adventure, and let's celebrate the sweetness of life together.</p>
+            </div>
+            <div class="about-image">
+                <img src="about.png">
+            </div>
+        </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="contact-form">
+            <h2 style="text-align: center;">Contact Us</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <input id="text" name="message" placeholder="Enter your message"></input>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div class="contact-info">
+            <h2>Get in touch through..!!</h2>
+            <p>Visit : Choco House , DD Nagar , Chennai , Tamil Nadu </p>
+            <p>Mail: chocohouse@gmail.com</p>
+            <p>Call: 0987654321</p>
+            <a href="https://www.instagram.com/">
+                <img src="insta.png" alt="Instagram">
+            </a>
+            <a href="https://www.youtube.com/">
+                <img src="yt.png" alt="YouTube">
+            </a>
+            <a href="https://wa.me/">
+                <img src="wp.png" alt="WhatsApp">
+            </a>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2023 Choco House. All rights reserved</p>
+    </footer>
+</body>
+</html>
+
+
